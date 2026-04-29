@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>NutriFlow</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <ion-icon name="restaurant-outline"></ion-icon>
+        </a>
+
+        <div class="search">
+            <ion-icon name="search-outline"></ion-icon>
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="bar">
+            <ul class="nav">
+                <li><a href="#">Breakfast</a></li>
+                <li><a href="#">Lunch</a></li>
+                <li><a href="#">Dinner</a></li>
+            </ul>
+
+            <div class="checkout">
+                <ion-icon name="bag-outline"></ion-icon>
+                <span class="number">4</span>
+            </div>
+
+            <div class="menu">
+                <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+            </div>
+
+        </div>
+
+        <ul class="nav-mobile">
+            <li><a href="#">Breakfast</a></li>
+            <li><a href="#">Lunch</a></li>
+            <li><a href="#">Dinner</a></li>
+        </ul>
+
+    </header>
+
+    <div class="banner">
+        <div class="content">
+            <h1>Food <ion-icon name="heart-half-outline"></ion-icon></h1>
+            <h2>Lovers</h2>
+        </div>
+        <div class="imgBox">
+            <div class="food">
+                <img src="./assets/food_1.png" alt="Food Image">
+            </div>
+            <div class="description">
+                <h3>Delicious Food</h3>
+                <p>Experience the taste of excellence with our carefully crafted dishes, made from the freshest
+                    ingredients and prepared with passion.</p>
+                <ul class="download">
+                    <li><img src="./assets/google.png" alt="Play Store"></li>
+                    <li><img src="./assets/apple.png" alt="App Store"></li>
+                </ul>
+                <span class="price">$35.49</span>
+            </div>
+        </div>
+        <a href="#" class="btn">learn more <ion-icon name="search-circle-outline"></ion-icon></a>
+        <span class="order"><ion-icon name="bag-add-outline"></ion-icon></span>
+        <div class="selections">
+            <div class="circle">
+                <div class="options" onclick="changeImg('food_1')">
+                    <img src="./assets/food_1.png" alt="Food Image">
+                </div>
+                <div class="options" onclick="changeImg('food_2')">
+                    <img src="./assets/food_2.png" alt="Food Image">
+                </div>
+                <div class="options" onclick="changeImg('food_3')">
+                    <img src="./assets/food_3.png" alt="Food Image">
+                </div>
+            </div>
+            <h1>Healthy Life</h1>
+        </div>
+    </div>
+
+    <ul class="social_media">
+        <li><ion-icon name="logo-facebook"></ion-icon></li>
+        <li><ion-icon name="logo-instagram"></ion-icon></li>
+        <li><ion-icon name="logo-twitter"></ion-icon></li>
+    </ul>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy; 2026 NutriFlow. <span>All rights reserved.</span></p>
+        </div>
+    </footer>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
