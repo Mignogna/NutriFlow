@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 :root {
     --primary-color: #ff4000;
     --secondary-color: #000000;
-    --accent-color: #ffeb3b;
     --background-color: #ffffff;
     --text-color: #333333;
 }
@@ -32,7 +33,7 @@ header {
     padding: 20px 100px;
     background-color: var(--background-color);
     z-index: 20;
-    box-shadow: 30px 30px 30px 30px rgba(255, 255, 255, 0.8);
+    box-shadow: 10px 5px 30px 30px rgba(255, 255, 255, 0.8);
 }
 
 .logo {
@@ -40,7 +41,7 @@ header {
     font-weight: 800;
     font-size: 2.5rem;
     color: var(--secondary-color);
-    width: 60px;
+    width: 190px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -50,6 +51,17 @@ header {
     padding: 15px;
     cursor: pointer;
     transition: 0.5s;
+}
+
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-family: 'Berkshire Swash', cursive;
+    margin-left: 10px;
 }
 
 .social_media li:active,
@@ -62,10 +74,8 @@ header {
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
+.checkout,
 .search {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     width: 60px;
     height: 60px;
     display: flex;
@@ -131,14 +141,13 @@ header {
     margin-right: 50px;
 }
 
+.nav-mobile li,
 .nav li {
-    list-style: none;
     margin: 0 20px;
 }
 
 .nav li a,
 .nav-mobile li a {
-    text-decoration: none;
     color: var(--secondary-color);
     font-weight: 300;
     text-transform: uppercase;
@@ -154,15 +163,6 @@ header {
 
 .checkout {
     position: relative;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    padding: 10px;
-    transition: 0.5s;
 }
 
 .checkout span {
@@ -192,19 +192,22 @@ header {
     position: absolute;
     content: "";
     top: 0;
-    left: 0;
+    right: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100vh;
+    gap: 2rem;
+    width: 50%;
+    height: 40vh;
     background-color: var(--background-color);
+    border-bottom-left-radius: 40px;
     z-index: 20;
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
     transform: translateX(100%);
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1);
 }
 
 .banner {
@@ -232,7 +235,7 @@ header {
     top: 45%;
     transform: translateY(-50%);
     color: var(--secondary-color);
-    z-index: 10;
+    Z-index: 10;
 }
 
 .banner .content h1 ion-icon {
@@ -253,6 +256,7 @@ header {
     transform: translateY(-50%);
     color: var(--secondary-color);
     z-index: 10;
+    margin-left: 3rem;
 }
 
 .banner .imgBox {
@@ -322,26 +326,6 @@ header {
     text-align: center;
 }
 
-.description .download {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-    gap: 15px;
-}
-
-.description .download li {
-    list-style: none;
-    gap: 10px;
-    border-radius: 20px;
-    padding: 5px 5px 0;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1)
-}
-
-.description .download li img {
-    max-width: 200px;
-}
-
 .description .price {
     font-size: 1.5rem;
     font-weight: 400;
@@ -361,7 +345,6 @@ header {
     bottom: 7%;
     left: 50%;
     transform: translateX(-50%);
-    text-decoration: none;
     color: var(--secondary-color);
     font-weight: 300;
     cursor: pointer;
@@ -383,7 +366,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 8%;
+    bottom: 0;
     left: 70%;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -393,6 +376,10 @@ header {
     height: 80px;
     transition: 0.5s;
     background: var(--background-color);
+}
+
+.banner .selections-mobile {
+    display: none;
 }
 
 .banner .selections {
@@ -489,7 +476,6 @@ header {
 
 .social_media li {
     background-color: var(--background-color);
-    list-style: none;
     width: 50px;
     height: 50px;
     padding: 2px;
@@ -512,13 +498,13 @@ footer {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 25%;
+    width: 23%;
     padding: 10px 50px;
     font-size: 0.8rem;
     background-color: var(--primary-color);
     border-top-left-radius: 20px;
     z-index: 20;
-    box-shadow: 30px 30px 30px 30px rgba(255, 255, 255, 0.8);
+    box-shadow: -10px -5px 30px 30px rgba(255, 255, 255, 0.8);
 }
 
 .copyright {
@@ -538,64 +524,116 @@ footer {
 
 /* --- RESPONSIVIDADE --- */
 
-/* Tablets e Telas Médias (até 1024px) */
 @media (max-width: 1024px) {
     header {
-        padding: 20px 40px;
+        padding: 20px 50px;
     }
 
-    .nav {
-        display: none; /* Esconde a nav desktop */
+    .banner .content h1 {
+        font-size: 5em;
+        margin-left: -3rem;
     }
 
-    .menu {
-        display: block; /* Mostra o ícone de menu hambúrguer */
-        margin-left: 20px;
+    .banner .content h1 ion-icon {
+        margin-left: 0;
     }
 
-    .banner .content h1 { font-size: 5em; }
-    .banner .content h2 { font-size: 4em; }
+    .banner .content h2 {
+        font-size: 4em;
+        margin-left: 0;
+    }
 
     .banner .imgBox {
         width: 450px;
         height: 450px;
     }
 
-    .banner .imgBox .food, 
+    .banner .imgBox .food,
     .banner .imgBox .description {
-        width: 400px;
-        height: 400px;
+        width: 430px;
+        height: 430px;
+    }
+
+    .description h3 {
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    .description p {
+        font-size: 0.9rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .banner .selections h1 {
+        font-size: 5.5rem;
+        line-height: 5rem;
+        left: 0;
+    }
+
+    .order {
+        width: 60px;
+        height: 60px;
+        transform: translate(-55px, -30px);
     }
 }
 
-/* Celulares Grandes (até 768px) */
 @media (max-width: 768px) {
     body {
-        overflow-y: auto; /* Permite scroll se o conteúdo for maior que a tela */
+        overflow-y: auto;
+    }
+
+    .logo img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .logo span {
+        font-size: 1rem;
+        margin-left: 5px;
+    }
+
+    .checkout,
+    .search {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    .order ion-icon,
+    .btn ion-icon,
+    .checkout ion-icon,
+    .search ion-icon {
+        font-size: 1.7rem;
+    }
+
+    .nav {
+        margin-right: 15px;
+    }
+
+    .nav li {
+        margin: 0 15px;
     }
 
     .banner {
-        flex-direction: column;
-        padding: 100px 20px;
-        justify-content: flex-start;
+        padding: 70px 20px;
+    }
+
+    .banner .content {
+        margin-left: 3rem;
     }
 
     .banner .content h1 {
         position: relative;
         font-size: 3.5em;
-        top: 0;
-        transform: none;
-        text-align: center;
-        justify-content: center;
     }
 
     .banner .content h2 {
         position: relative;
         font-size: 3em;
-        top: 0;
-        transform: none;
-        text-align: center;
-        justify-content: center;
         margin-bottom: 30px;
     }
 
@@ -609,50 +647,220 @@ footer {
         height: 320px;
     }
 
-    .banner .imgBox .food, 
+    .banner .imgBox .food,
     .banner .imgBox .description {
         width: 300px;
         height: 300px;
         padding: 20px;
     }
 
-    .description h3 { font-size: 1.5rem; }
-    .description p { font-size: 0.9rem; }
+    .banner .imgBox.active {
+        transform: translateX(-5%) rotateY(180deg);
+    }
+
+    .description h3 {
+        font-size: 1.2rem;
+    }
+
+    .description p {
+        font-size: 0.7rem;
+    }
 
     .banner .selections {
-        width: 100%;
+        width: 31%;
         height: auto;
         margin-top: 50px;
     }
 
-    .banner .circle {
-        display: none; /* Esconde o círculo decorativo em telas muito pequenas para limpar o visual */
+    .banner .selections h1 {
+        font-size: 5rem;
+        line-height: 4rem;
+    }
+
+    .banner .selections img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .banner .selections .options {
+        width: 130px;
+        height: 130px;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+        bottom: 20%;
+    }
+
+    .social_media {
+        bottom: 5%;
     }
 
     .order {
-        left: 85%;
+        left: 70%;
+        bottom: 7%;
         width: 60px;
         height: 60px;
     }
 
     footer {
-        width: 100%;
-        border-radius: 0;
+        width: 45%;
+        padding: 10px 30px;
     }
 }
 
-/* Celulares Pequenos (até 480px) */
 @media (max-width: 480px) {
-    .banner .content h1 { font-size: 2.5em; }
-    .banner .content h2 { font-size: 2em; }
-    
+       header {
+        padding: 10px 30px;
+        box-shadow: none;
+    }
+
+    .logo {
+        width: 110px;
+        height: 40px;
+    }
+
+    .logo span {
+        font-size: 0.8rem;
+    }
+
+    .logo img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .nav {
+        display: none;
+    }
+
     .search.active {
-        width: 200px;
+        width: 160px;
+    }
+
+    .menu {
+        display: block;
+        margin-left: 40px;
+    }
+
+    .banner {
+        flex-direction: column;
+        padding: 110px 10px 0 10px;
+    }
+
+    .banner .content h1 {
+        font-size: 3em;
+    }
+
+    .banner .content h2 {
+        font-size: 2.5em;
+    }
+
+    .banner .imgBox {
+        top: 5%;
+        transform: translateY(-28%);
+    }
+
+    .banner .imgBox.active {
+        transform: translate(1%, -27%) rotateY(180deg);
+    }
+
+    .banner .selections {
+        display: none;
+    }
+
+    .banner .selections-mobile {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 10vh;
+    }
+
+    .banner .circle-mobile {
+        position: absolute;
+        left: -15px;
+        top: 225%;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+        animation: animate 10s linear infinite;
+    }
+
+    .banner .selections-mobile img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .banner .selections-mobile .options-mobile {
+        position: absolute;
+        background-color: var(--background-color);
+        width: 110px;
+        height: 110px;
+        padding: 15px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .banner .selections-mobile .options-mobile:first-child {
+        top: 10%;
+        left: 2%;
+    }
+
+    .banner .selections-mobile .options-mobile:nth-child(2) {
+        top: 2%;
+        left: 40%;
+        transform: translateY(-50%);
+    }
+
+    .banner .selections-mobile .options-mobile:last-child {
+        top: 10%;
+        right: 2%;
+    }
+
+    .banner .selections-mobile h1 {
+        font-family: "Berkshire Swash", cursive;
+        font-size: 2rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateY(-75%) translateX(-50%);
+        text-align: center;
+        opacity: 0.2;
+        line-height: 6.5rem;
+        width: 480px;
+    }
+
+
+    .btn {
+        bottom: 30%;
+        gap: 5px;
     }
 
     .social_media {
-        bottom: 10%;
-        left: 50%;
+        flex-direction: column;
+        bottom: 22%;
+        left: 10%;
         transform: translateX(-50%);
     }
+
+    .order {
+        bottom: 20%;
+        left: 90%;
+    }
+
+    footer {
+        width: 70%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        box-shadow: none;
+        margin-right: 4.5rem;
+    }
+
+
 }

@@ -10,13 +10,14 @@
         href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <title>NutriFlow</title>
 </head>
 
 <body>
     <header>
         <a href="#" class="logo">
-            <ion-icon name="restaurant-outline"></ion-icon>
+           <img src="./assets/logo.png" alt=""> <span>Nutriflow</span>
         </a>
 
         <div class="search">
@@ -40,8 +41,8 @@
             </div>
 
         </div>
-
-        <ul class="nav-mobile">
+      
+        <ul class="nav-mobile" id="menu-toogle">
             <li><a href="#">Breakfast</a></li>
             <li><a href="#">Lunch</a></li>
             <li><a href="#">Dinner</a></li>
@@ -50,23 +51,20 @@
     </header>
 
     <div class="banner">
-        <div class="content">
+        <div class="content" translate="no">
             <h1>Food <ion-icon name="heart-half-outline"></ion-icon></h1>
             <h2>Lovers</h2>
         </div>
         <div class="imgBox">
             <div class="food">
-                <img src="./assets/food_1.png" alt="Food Image">
+                <img src="./assets/food_home.png" alt="Food Image">
             </div>
             <div class="description">
-                <h3>Delicious Food</h3>
-                <p>Experience the taste of excellence with our carefully crafted dishes, made from the freshest
+                <h3 class="title">Delicious Food</h3>
+                <p >Experience the taste of excellence with our carefully crafted dishes, made from the freshest
                     ingredients and prepared with passion.</p>
-                <ul class="download">
-                    <li><img src="./assets/google.png" alt="Play Store"></li>
-                    <li><img src="./assets/apple.png" alt="App Store"></li>
-                </ul>
-                <span class="price">$35.49</span>
+              
+                <span class="price"></span>
             </div>
         </div>
         <a href="#" class="btn">learn more <ion-icon name="search-circle-outline"></ion-icon></a>
@@ -80,6 +78,20 @@
                     <img src="./assets/food_2.png" alt="Food Image">
                 </div>
                 <div class="options" onclick="changeImg('food_3')">
+                    <img src="./assets/food_3.png" alt="Food Image">
+                </div>
+            </div>
+            <h1>Healthy Life</h1>
+        </div>
+         <div class="selections-mobile">
+            <div class="circle-mobile">
+                <div class="options-mobile" onclick="changeImg('food_1')">
+                    <img src="./assets/food_1.png" alt="Food Image">
+                </div>
+                <div class="options-mobile" onclick="changeImg('food_2')">
+                    <img src="./assets/food_2.png" alt="Food Image">
+                </div>
+                <div class="options-mobile" onclick="changeImg('food_3')">
                     <img src="./assets/food_3.png" alt="Food Image">
                 </div>
             </div>
