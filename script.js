@@ -35,8 +35,12 @@ btn.addEventListener("click", () => {
 });
 
 function changeImg(img) {
-  const foodImg = document.querySelector(".food img");
-  foodImg.src = `./assets/${img}.png`;
+  console.log("Tentando mudar para:", img);
+  const foodImg = document.querySelectorAll(".food img");
+  foodImg.forEach(image => {
+    image.src = `./assets/${img}.png`;
+  });
+  /*foodImg.src = `./assets/${img}.png`;*/
 
   const titleElement = document.querySelector(".description h3");
   const descElement = document.querySelector(".description p");

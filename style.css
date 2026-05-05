@@ -397,6 +397,7 @@ header {
     border-radius: 50%;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
     animation: animate 10s linear infinite;
+
 }
 
 @keyframes animate {
@@ -790,8 +791,7 @@ footer {
     .banner .selections-mobile img {
         width: 100px;
         height: 100px;
-        border-radius: 50%;
-    }
+          }
 
     .banner .selections-mobile .options-mobile {
         position: absolute;
@@ -805,6 +805,7 @@ footer {
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        z-index: 20;
     }
 
     .banner .selections-mobile .options-mobile:first-child {
@@ -832,8 +833,8 @@ footer {
         transform: translateY(-75%) translateX(-50%);
         text-align: center;
         opacity: 0.2;
-        line-height: 6.5rem;
-        width: 480px;
+        line-height: 5.7rem;
+       
     }
 
 
