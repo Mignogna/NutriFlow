@@ -1,3 +1,5 @@
+<img width="1024" height="488" alt="Image" src="https://github.com/user-attachments/assets/bc01b9e3-83d1-420e-a3fb-73889ec0b7c4" />
+
 # **🚀 NutriFlow - Landing Page de Comida Saudável**
 Uma landing page moderna, responsiva e interativa desenvolvida para entusiastas de gastronomia e vida saudável. O projeto apresenta um design elegante com animações de rotação (3D flip) para exibir detalhes dos pratos.
 
